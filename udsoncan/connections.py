@@ -116,6 +116,25 @@ class BaseConnection(ABC):
 	def __exit__(self, type, value, traceback):
 		pass
 
+class DoIPConnection(BaseConnection):
+
+    def __init__(self):
+        pass
+
+    def open(self):
+        return self
+    
+    def close(self):
+        pass
+
+    def empty_rxqueue(self):
+        pass
+    
+    def specific_send(self, payload):
+        pass
+
+    def specific_wait_frame(self, timeout=2):
+        pass
 
 class SocketConnection(BaseConnection):
 	"""

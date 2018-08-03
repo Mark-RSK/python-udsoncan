@@ -5,6 +5,12 @@ import socket
 import threading
 import time
 
+class TestDoIPConnection(UdsTest):
+
+    def test_open(self):
+        conn = DoIPConnection()
+        conn.open()
+
 class TestIsoTPConnection(UdsTest):
 
 	def setUp(self):
